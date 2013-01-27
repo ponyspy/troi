@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	h1 Регистрация
+	form(action='/registr', method='post')
+		|Логин:
+		br
+		input(type='text', name='user', value='john')
+		br
+		|Пароль:
+		br
+		input(type='text', name='password', value='pass')
+		br
+		br
+		input(type='submit', value='Отправить!')

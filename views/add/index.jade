@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+	h2 Добавить
+	form(action="/auth/add", method="post", enctype="multipart/form-data")
+		|Название:
+		br
+		input(type="text", name="title")
+		br
+		br
+		|Описание:
+		br
+		textarea(name="description", cols="40", rows="3")
+		br
+		br
+		|Изображение:
+		br
+		input(type="file", name="img1")
+		br
+		br
+		input(type="submit", value="Add")

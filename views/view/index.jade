@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	h2 Телевизоры
+	each item in items
+			div(id=item._id)
+				b.title= item.title
+				br
+				br
+			a(href='/auth/view/' + item._id)
+				img(src=item.img, class='image')
+			br
+			br
+	a(href='/auth/add') Добавить

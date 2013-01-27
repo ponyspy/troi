@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	h2= item.title
+	img(src=item.img)
+	br
+	br
+	b= item.description
+	form(id='e_form', action='/auth/view/' + item._id, method='post')
+		input(type='hidden', name='edit', value=item._id) 
+	form(id='d_form', action='/auth/view/' + item._id, method='post')
+		input(type='hidden', name='delete', value=item._id)
+	a(class='edit', href='#') Редактировать
+	|&nbsp;| 
+	a(class='delete', href='#') Удалить
+	br
+	br
